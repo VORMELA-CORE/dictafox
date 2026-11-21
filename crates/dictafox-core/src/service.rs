@@ -939,6 +939,7 @@ mod tests {
     }
 
     #[test]
+    #[cfg_attr(windows, ignore = "cpal device listing crashes on audio-less Windows CI runners")]
     fn diagnostics_never_include_the_provider_key() {
         let (service, _dir) = test_service();
         let mut settings = service.settings();
