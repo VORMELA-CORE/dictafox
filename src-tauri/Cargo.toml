@@ -1,0 +1,26 @@
+[package]
+name = "dictafox"
+version = "0.1.0"
+edition = "2021"
+description = "DictaFox — Speak Naturally. Type Everywhere."
+license = "MIT"
+authors = ["Vormela Core"]
+repository = "https://github.com/VORMELA-CORE/dictafox"
+default-run = "dictafox"
+
+[lib]
+name = "dictafox_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["tray-icon", "image-png"] }
+tauri-plugin-global-shortcut = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+dictafox-core = { path = "../crates/dictafox-core" }
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.59", features = ["Win32_System_Console"] }

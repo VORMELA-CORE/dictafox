@@ -1,0 +1,117 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "DictaFox",
+  "version": "0.1.0",
+  "identifier": "com.vormelacore.dictafox",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "DictaFox",
+        "width": 1120,
+        "height": 760,
+        "minWidth": 900,
+        "minHeight": 620,
+        "center": true,
+        "resizable": true,
+        "fullscreen": false,
+        "visible": true,
+        "decorations": true,
+        "theme": "Dark",
+        "backgroundColor": "#0d0f0e"
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "category": "Productivity",
+    "shortDescription": "Speak Naturally. Type Everywhere.",
+    "longDescription": "DictaFox by Vormela Core is a privacy-first dictation app for Linux, Windows and macOS. Press a shortcut, speak, and polished text is pasted into the app you were using. Transcription runs locally with whisper.cpp; no account, subscription or cloud service is required.",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "linux": {
+      "deb": {
+        "depends": [
+          "libwebkit2gtk-4.1-0",
+          "libgtk-3-0",
+          "libayatana-appindicator3-1"
+        ],
+        "recommends": [
+          "pulseaudio-utils",
+          "wl-clipboard",
+          "xclip",
+          "libxtst6",
+          "libnotify-bin"
+        ],
+        "section": "utils"
+      },
+      "rpm": {
+        "depends": [
+          "webkit2gtk4.1",
+          "gtk3",
+          "libayatana-appindicator-gtk3"
+        ],
+        "recommends": [
+          "pulseaudio-utils",
+          "wl-clipboard",
+          "xclip",
+          "libXtst",
+          "libnotify"
+        ]
+      },
+      "appimage": {
+        "bundleMediaFramework": false
+      }
+    },
+    "publisher": "Vormela Core",
+    "copyright": "© 2026 Vormela Core",
+    "homepage": "https://github.com/VORMELA-CORE/dictafox",
+    "license": "MIT",
+    "licenseFile": "../LICENSE",
+    "macOS": {
+      "minimumSystemVersion": "11.0",
+      "signingIdentity": "-",
+      "hardenedRuntime": true,
+      "entitlements": "Entitlements.plist",
+      "infoPlist": "Info.plist",
+      "dmg": {
+        "windowSize": {
+          "width": 620,
+          "height": 400
+        }
+      }
+    },
+    "windows": {
+      "webviewInstallMode": {
+        "type": "downloadBootstrapper",
+        "silent": true
+      },
+      "nsis": {
+        "installMode": "currentUser",
+        "displayLanguageSelector": false,
+        "installerIcon": "icons/icon.ico",
+        "startMenuFolder": "Vormela Core"
+      },
+      "wix": {
+        "language": "en-US"
+      }
+    }
+  },
+  "plugins": {},
+  "mainBinaryName": "dictafox"
+}

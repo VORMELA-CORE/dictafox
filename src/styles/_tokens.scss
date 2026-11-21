@@ -1,0 +1,81 @@
+:root {
+  color-scheme: dark;
+  --font-sans: "Inter", "SF Pro Text", "Segoe UI", "Ubuntu", "Cantarell",
+    system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", "SFMono-Regular", Consolas,
+    "Liberation Mono", monospace;
+  --radius-sm: 8px;
+  --radius: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --sidebar-width: 248px;
+  --content-max: 1180px;
+  --transition: 140ms ease;
+  --shadow-card: 0 1px 0 rgba(255, 255, 255, 0.03) inset;
+  --shadow-pop: 0 24px 70px rgba(0, 0, 0, 0.5);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0b0d0c;
+  --bg-deep: #080a09;
+  --surface: #121613;
+  --surface-2: #171c18;
+  --surface-3: #1d241f;
+  --surface-hover: #222a24;
+  --border: #252d27;
+  --border-strong: #354035;
+  --text: #eef3ec;
+  --text-muted: #99a69b;
+  --text-faint: #6d7b71;
+  --accent: #b7f06a;
+  --accent-strong: #cbff8a;
+  --accent-ink: #0a1005;
+  --accent-soft: rgba(183, 240, 106, 0.11);
+  --accent-line: rgba(183, 240, 106, 0.32);
+  --danger: #ff8577;
+  --danger-soft: rgba(255, 133, 119, 0.1);
+  --warning: #f0c65c;
+  --warning-soft: rgba(240, 198, 92, 0.1);
+  --success: #86e3ad;
+  --success-soft: rgba(134, 227, 173, 0.1);
+  --focus: 0 0 0 3px rgba(183, 240, 106, 0.28);
+  --fox-bg: #0e100f;
+  --fox-accent: #b7f06a;
+  --fox-accent-dark: #7eb03f;
+  --fox-cream: #ecfadb;
+  --wave: #b7f06a;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f5f6f2;
+  --bg-deep: #eef0e9;
+  --surface: #ffffff;
+  --surface-2: #f1f3ed;
+  --surface-3: #e8ebe2;
+  --surface-hover: #ecefe7;
+  --border: #dde2d6;
+  --border-strong: #c7cfbf;
+  --text: #182019;
+  --text-muted: #59665b;
+  --text-faint: #7c897f;
+  --accent: #6fae1f;
+  --accent-strong: #5c9516;
+  --accent-ink: #f7ffe9;
+  --accent-soft: rgba(111, 174, 31, 0.1);
+  --accent-line: rgba(111, 174, 31, 0.3);
+  --danger: #bb3a2c;
+  --danger-soft: rgba(187, 58, 44, 0.08);
+  --warning: #92660a;
+  --warning-soft: rgba(146, 102, 10, 0.09);
+  --success: #2f7d4e;
+  --success-soft: rgba(47, 125, 78, 0.09);
+  --focus: 0 0 0 3px rgba(111, 174, 31, 0.28);
+  --fox-bg: #101410;
+  --fox-accent: #b7f06a;
+  --fox-accent-dark: #7eb03f;
+  --fox-cream: #ecfadb;
+  --wave: #4f8f14;
+  --shadow-pop: 0 24px 70px rgba(24, 40, 26, 0.18);
+}
