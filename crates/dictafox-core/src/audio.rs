@@ -635,7 +635,7 @@ mod backend {
             move |data: &[T], _: &cpal::InputCallbackInfo| {
                 mono.clear();
                 for frame in data.chunks(channels) {
-                    let sum: f32 = frame.iter().map(|s| f32::from_sample(*s)).sum();
+                    let sum: f32 = frame.iter().map(|s| f32::from_sample_(*s)).sum();
                     let value = (sum / frame.len() as f32).clamp(-1.0, 1.0);
                     mono.push((value * 32767.0) as i16);
                 }
