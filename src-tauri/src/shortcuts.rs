@@ -387,7 +387,8 @@ mod tests {
             "Ctrl+Shift+D"
         );
         assert_eq!(parse("F9").unwrap().display, "F9");
-        assert_eq!(parse("Alt+ArrowUp").unwrap().display, "Alt+Up");
+        let alt_up = if cfg!(target_os = "macos") { "Option+Up" } else { "Alt+Up" };
+        assert_eq!(parse("Alt+ArrowUp").unwrap().display, alt_up);
     }
 
     #[test]
