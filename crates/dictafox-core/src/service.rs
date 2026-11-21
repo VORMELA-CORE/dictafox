@@ -926,6 +926,9 @@ mod tests {
         assert!(!service.history_delete(42).unwrap());
     }
 
+    // Linux-only: it checks for pactl, and cpal device listing crashes on
+    // GitHub's audio-less Windows runners (STATUS_ACCESS_VIOLATION).
+    #[cfg(target_os = "linux")]
     #[test]
     fn capabilities_describe_this_machine_without_inventing_audio() {
         let (service, _dir) = test_service();
