@@ -14,6 +14,7 @@
   --sidebar-width: 248px;
   --content-max: 1180px;
   --transition: 140ms ease;
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
   --shadow-card: 0 1px 0 rgba(255, 255, 255, 0.03) inset;
   --shadow-pop: 0 24px 70px rgba(0, 0, 0, 0.5);
 }

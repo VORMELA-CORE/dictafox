@@ -70,7 +70,7 @@ export function Waveform({
         <span
           key={index}
           className="waveform-bar"
-          style={{ height: `${Math.max(5, Math.round(level * 100))}%` }}
+          style={{ transform: `scaleY(${Math.max(0.05, level).toFixed(3)})` }}
         />
       ))}
     </div>
@@ -177,7 +177,7 @@ export function MicTester({
       ) : null}
       <div className="mic-test-surface">
         <div className="level-meter" aria-hidden="true">
-          <span style={{ width: `${Math.round(level * 100)}%` }} />
+          <span style={{ transform: `scaleX(${level.toFixed(3)})` }} />
         </div>
         <div className="mic-test-actions">
           <Button

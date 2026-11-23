@@ -20,6 +20,22 @@
   margin: 0 auto;
 }
 
+/* Enter-only motion: a short fade and rise. Transform and opacity only, so it stays cheap in WebKitGTK. */
+.route-view {
+  animation: route-in 200ms var(--ease-out) backwards;
+}
+
+.onboarding-body {
+  animation: route-in 220ms var(--ease-out) backwards;
+}
+
+@keyframes route-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
 .page-head {
   display: flex;
   justify-content: space-between;
@@ -350,6 +366,7 @@
 
 .record-button {
   flex: none;
+  position: relative;
   width: 118px;
   height: 118px;
   border-radius: 50%;
@@ -392,7 +409,18 @@
     box-shadow:
       0 0 0 8px color-mix(in srgb, var(--danger) 16%, transparent),
       0 18px 36px rgba(0, 0, 0, 0.28);
-    animation: record-glow 1.8s ease-in-out infinite;
+
+
+    /* A ring that scales and fades. It replaces an animated box-shadow, which repaints every frame. */
+    &::after {
+      content: "";
+      position: absolute;
+      inset: -9px;
+      border-radius: 50%;
+      border: 2px solid color-mix(in srgb, var(--danger) 45%, transparent);
+      pointer-events: none;
+      animation: record-ring 1.8s var(--ease-out) infinite;
+    }
   }
 
   &.is-transcribing {
@@ -417,11 +445,14 @@
   }
 }
 
-@keyframes record-glow {
-  50% {
-    box-shadow:
-      0 0 0 12px color-mix(in srgb, var(--danger) 10%, transparent),
-      0 18px 36px rgba(0, 0, 0, 0.28);
+@keyframes record-ring {
+  from {
+    transform: scale(0.94);
+    opacity: 0.9;
+  }
+  to {
+    transform: scale(1.14);
+    opacity: 0;
   }
 }
 
@@ -1350,6 +1381,13 @@
   display: flex;
   align-items: center;
   gap: 13px;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+  }
 
   .brand-name {
     font-size: 20px;

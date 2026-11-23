@@ -313,7 +313,7 @@ export function Onboarding() {
                                 <div className="progress-track">
                                   <span
                                     style={{
-                                      width: `${progress.phase === "downloading" ? percent(progress.downloaded, progress.total) : 100}%`,
+                                      transform: `scaleX(${(progress.phase === "downloading" ? percent(progress.downloaded, progress.total) : 100) / 100})`,
                                     }}
                                   />
                                 </div>

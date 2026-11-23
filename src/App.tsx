@@ -100,12 +100,14 @@ export function App() {
             <ErrorBanner error={error} onDismiss={dismissError} />
           </div>
         ) : null}
-        {route === "dashboard" ? <Dashboard /> : null}
-        {route === "history" ? <History /> : null}
-        {route === "dictionary" ? <Dictionary /> : null}
-        {route === "models" ? <Models /> : null}
-        {route === "settings" ? <SettingsPage /> : null}
-        {route === "about" ? <About /> : null}
+        <div key={route} className="route-view">
+          {route === "dashboard" ? <Dashboard /> : null}
+          {route === "history" ? <History /> : null}
+          {route === "dictionary" ? <Dictionary /> : null}
+          {route === "models" ? <Models /> : null}
+          {route === "settings" ? <SettingsPage /> : null}
+          {route === "about" ? <About /> : null}
+        </div>
       </main>
       <Toasts toasts={toasts} onDismiss={dismissToast} />
     </div>
