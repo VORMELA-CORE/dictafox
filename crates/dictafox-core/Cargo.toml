@@ -1,6 +1,6 @@
 [package]
 name = "dictafox-core"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 description = "Local-first dictation engine behind DictaFox: audio capture, whisper.cpp transcription, text refinement and text delivery."
 license = "MIT"
