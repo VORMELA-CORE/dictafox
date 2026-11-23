@@ -13,7 +13,7 @@
     "windows": [
       {
         "label": "main",
-        "title": "DictaFox",
+        "title": "DictaFox by Vormela Core",
         "width": 1120,
         "height": 760,
         "minWidth": 900,
@@ -24,7 +24,7 @@
         "visible": true,
         "decorations": true,
         "theme": "Dark",
-        "backgroundColor": "#0d0f0e"
+        "backgroundColor": "#07110D"
       }
     ],
     "security": {

@@ -1,10 +1,18 @@
 <p align="center">
-  <img src="src-tauri/icons/128x128@2x.png" width="96" alt="DictaFox logo">
+  <img src="src-tauri/icons/128x128@2x.png" width="96" alt="DictaFox app icon">
 </p>
 
 <h1 align="center">DictaFox</h1>
-<p align="center"><strong>Speak Naturally. Type Everywhere.</strong><br>
-A product of <strong>Vormela Core</strong></p>
+<p align="center"><strong>Speak Naturally. Type Everywhere.</strong></p>
+
+<p align="center">
+  <a href="https://vormelacore.com">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="src/assets/brand/vormela-core-lockup-dark.svg">
+      <img src="src/assets/brand/vormela-core-lockup-light.svg" height="34" alt="A product of Vormela Core">
+    </picture>
+  </a>
+</p>
 
 DictaFox is a private voice-dictation app for **Linux**, **Windows** and **macOS**. Press a shortcut and speak. DictaFox types the text into the app you were using. Speech recognition runs on your own computer with [whisper.cpp](https://github.com/ggerganov/whisper.cpp). You do not need an account, a subscription or a cloud service.
 
@@ -74,6 +82,8 @@ On **Linux Wayland**, applications cannot grab global keys. Bind `dictafox --tog
 
 ### Where your data goes
 
+Your audio and transcripts stay on your computer. The only optional network use is **cloud text refinement**, which is off by default. If you turn it on in **Settings → Refinement** and add a key, DictaFox sends the transcript text (never the audio) to the OpenAI-compatible provider you configure. Dictation keeps working without it.
+
 All your data stays on your computer:
 
 | OS | Data folder |
@@ -116,7 +126,7 @@ npm test               # frontend tests
 
 ## Releasing
 
-Change the version in `package.json`, `src-tauri/tauri.conf.json` and both `Cargo.toml` files. Then push a tag:
+Change the version in `package.json`, `src-tauri/tauri.conf.json` and both `Cargo.toml` files, and move the **Unreleased** entries in `CHANGELOG.md` under the new version. Then push a tag:
 
 ```bash
 git tag v0.1.0 && git push origin v0.1.0
@@ -130,9 +140,29 @@ The **Release** workflow builds the `.deb`, `.rpm`, AppImage, `.msi`, `-setup.ex
 crates/dictafox-core   engine: audio capture, whisper.cpp, refinement, clipboard/paste, storage
 src-tauri              desktop shell: windows, tray, global shortcut, CLI control
 src                    React + TypeScript interface
-scripts                installers, icon generator, CI helpers
+assets/brand           source artwork for the app icon
+scripts                installers and CI helpers
 ```
+
+## Brand and icons
+
+DictaFox follows the Vormela Core brand system: the Malachite palette and the Manrope typeface. The app icon is the Vormela Core mark on night. To regenerate every platform icon after changing the artwork:
+
+```bash
+npx tauri icon assets/brand/dictafox-app-icon-1024.png -o src-tauri/icons
+rm -rf src-tauri/icons/android src-tauri/icons/ios
+```
+
+## Changelog
+
+Release history is in [CHANGELOG.md](CHANGELOG.md).
 
 ## License
 
-MIT © 2026 Vormela Core
+The DictaFox source code is released under the [MIT License](LICENSE), © 2026 Vormela Core.
+
+The Vormela Core and DictaFox logos, the app icon and the brand lockups are not covered by the MIT license. Please use them only to identify the official product or the company, and do not use them in a way that suggests endorsement of a fork.
+
+## About Vormela Core
+
+[Vormela Core](https://vormelacore.com) builds product-led software: intelligent platforms and connected tools. DictaFox is one of them.

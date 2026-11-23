@@ -2,30 +2,6 @@ import { useEffect, useRef, type ButtonHTMLAttributes, type ReactNode } from "re
 import { AlertTriangle, Check, Info, X } from "lucide-react";
 import type { AppError, Limitation, ToastMessage } from "../types";
 
-export function FoxMark({ size = 32 }: { size?: number }) {
-  return (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 100 100"
-      role="img"
-      aria-label="DictaFox"
-      className="fox-mark"
-    >
-      <rect width="100" height="100" rx="24" fill="var(--fox-bg, #0e100f)" />
-      <path d="M24 36 L19 10 L43 25 Z" fill="var(--fox-accent-dark, #7eb03f)" />
-      <path d="M76 36 L81 10 L57 25 Z" fill="var(--fox-accent-dark, #7eb03f)" />
-      <path
-        d="M50 17 L73 30 L72 55 L50 86 L28 55 L27 30 Z"
-        fill="var(--fox-accent, #b7f06a)"
-      />
-      <path d="M50 52 L61 62 L50 80 L39 62 Z" fill="var(--fox-cream, #ecfadb)" />
-      <circle cx="41.5" cy="44" r="3.6" fill="#0e100f" />
-      <circle cx="58.5" cy="44" r="3.6" fill="#0e100f" />
-    </svg>
-  );
-}
-
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: "primary" | "secondary" | "ghost" | "danger" | "quiet";
   size?: "sm" | "md" | "lg";

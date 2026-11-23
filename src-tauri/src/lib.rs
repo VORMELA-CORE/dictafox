@@ -90,6 +90,7 @@ pub fn run(initial: Option<cli::CliAction>) {
             commands::get_diagnostics,
             commands::open_data_dir,
             commands::open_models_dir,
+            commands::open_link,
             commands::quit_app,
         ])
         .setup(move |app| {

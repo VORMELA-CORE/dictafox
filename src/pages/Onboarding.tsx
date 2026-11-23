@@ -21,7 +21,8 @@ import {
   MicTester,
   ShortcutRecorder,
 } from "../components/recording";
-import { Badge, Button, FoxMark, Spinner } from "../components/ui";
+import { AppIcon, ProductCredit, VormelaLink } from "../components/brand";
+import { Badge, Button, Spinner } from "../components/ui";
 
 const STEPS = ["Welcome", "Microphone", "Model", "Shortcut", "Test"];
 
@@ -125,10 +126,11 @@ export function Onboarding() {
     <div className="onboarding">
       <aside className="onboarding-brand">
         <div className="onboarding-brand-head">
-          <FoxMark size={46} />
+          <AppIcon size={46} label="DictaFox" />
           <div>
             <span className="brand-name">DictaFox</span>
             <span className="brand-tag">Speak Naturally. Type Everywhere.</span>
+            <ProductCredit lockupHeight={18} />
           </div>
         </div>
         <div className="onboarding-pitch">
@@ -557,7 +559,9 @@ export function Onboarding() {
           </div>
         </div>
         <p className="onboarding-footnote">
-          DictaFox is free and open source (MIT). No account is ever required.
+          DictaFox is free and open source (MIT) and made by{" "}
+          <VormelaLink link="website">Vormela Core</VormelaLink>. No account is ever
+          required.
         </p>
       </section>
     </div>

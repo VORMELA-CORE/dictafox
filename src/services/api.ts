@@ -92,5 +92,6 @@ export const api = {
   diagnostics: () => invoke<string>("get_diagnostics"),
   openDataDir: () => invoke<void>("open_data_dir"),
   openModelsDir: () => invoke<void>("open_models_dir"),
+  openLink: (link: "website" | "repository") => invoke<void>("open_link", { link }),
   quit: () => invoke<void>("quit_app"),
 };

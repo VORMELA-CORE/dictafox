@@ -1,7 +1,10 @@
+/* Vormela Core Malachite palette (brand tokens 2026-11-20). Role names follow
+   brand/tokens/design-tokens.json so the app stays in step with the brand. */
+
 :root {
   color-scheme: dark;
-  --font-sans: "Inter", "SF Pro Text", "Segoe UI", "Ubuntu", "Cantarell",
-    system-ui, sans-serif;
+  --font-sans: "Manrope", "Segoe UI", system-ui, -apple-system, "Ubuntu",
+    "Cantarell", sans-serif;
   --font-mono: "JetBrains Mono", "Fira Code", "SFMono-Regular", Consolas,
     "Liberation Mono", monospace;
   --radius-sm: 8px;
@@ -17,65 +20,63 @@
 
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --bg: #0b0d0c;
-  --bg-deep: #080a09;
-  --surface: #121613;
-  --surface-2: #171c18;
-  --surface-3: #1d241f;
-  --surface-hover: #222a24;
-  --border: #252d27;
-  --border-strong: #354035;
+  --bg: #07110d;
+  --bg-deep: #050b08;
+  --surface: #0d1a15;
+  --surface-2: #112019;
+  --surface-3: #14241d;
+  --surface-hover: #182b23;
+  --border: #1f2f28;
+  --border-strong: #64776d;
   --text: #eef3ec;
-  --text-muted: #99a69b;
-  --text-faint: #6d7b71;
-  --accent: #b7f06a;
-  --accent-strong: #cbff8a;
-  --accent-ink: #0a1005;
-  --accent-soft: rgba(183, 240, 106, 0.11);
-  --accent-line: rgba(183, 240, 106, 0.32);
-  --danger: #ff8577;
-  --danger-soft: rgba(255, 133, 119, 0.1);
-  --warning: #f0c65c;
-  --warning-soft: rgba(240, 198, 92, 0.1);
-  --success: #86e3ad;
-  --success-soft: rgba(134, 227, 173, 0.1);
-  --focus: 0 0 0 3px rgba(183, 240, 106, 0.28);
-  --fox-bg: #0e100f;
-  --fox-accent: #b7f06a;
-  --fox-accent-dark: #7eb03f;
-  --fox-cream: #ecfadb;
-  --wave: #b7f06a;
+  --text-muted: #a3b1a9;
+  --text-faint: #7d8c83;
+  --accent: #34c489;
+  --accent-strong: #5ed6a0;
+  --accent-ink: #04100b;
+  --accent-soft: rgba(52, 196, 137, 0.12);
+  --accent-line: rgba(52, 196, 137, 0.36);
+  --button: #c6f04e;
+  --button-hover: #d6f87a;
+  --button-text: #07110d;
+  --danger: #f29a8f;
+  --danger-soft: rgba(242, 154, 143, 0.1);
+  --warning: #e6c66a;
+  --warning-soft: rgba(230, 198, 106, 0.1);
+  --success: #79d49e;
+  --success-soft: rgba(121, 212, 158, 0.1);
+  --focus: 0 0 0 3px rgba(198, 240, 78, 0.34);
+  --wave: #34c489;
 }
 
 :root[data-theme="light"] {
   color-scheme: light;
-  --bg: #f5f6f2;
-  --bg-deep: #eef0e9;
+  --bg: #f5f5ef;
+  --bg-deep: #ecede5;
   --surface: #ffffff;
-  --surface-2: #f1f3ed;
-  --surface-3: #e8ebe2;
-  --surface-hover: #ecefe7;
-  --border: #dde2d6;
-  --border-strong: #c7cfbf;
-  --text: #182019;
-  --text-muted: #59665b;
-  --text-faint: #7c897f;
-  --accent: #6fae1f;
-  --accent-strong: #5c9516;
-  --accent-ink: #f7ffe9;
-  --accent-soft: rgba(111, 174, 31, 0.1);
-  --accent-line: rgba(111, 174, 31, 0.3);
-  --danger: #bb3a2c;
-  --danger-soft: rgba(187, 58, 44, 0.08);
-  --warning: #92660a;
-  --warning-soft: rgba(146, 102, 10, 0.09);
-  --success: #2f7d4e;
-  --success-soft: rgba(47, 125, 78, 0.09);
-  --focus: 0 0 0 3px rgba(111, 174, 31, 0.28);
-  --fox-bg: #101410;
-  --fox-accent: #b7f06a;
-  --fox-accent-dark: #7eb03f;
-  --fox-cream: #ecfadb;
-  --wave: #4f8f14;
-  --shadow-pop: 0 24px 70px rgba(24, 40, 26, 0.18);
+  --surface-2: #f3f4ee;
+  --surface-3: #ecede5;
+  --surface-hover: #e6e8df;
+  --border: #d9dcd3;
+  --border-strong: #7d867f;
+  --text: #0b1a14;
+  --text-muted: #4d5a53;
+  --text-faint: #6b766f;
+  --accent: #1e9e6a;
+  --accent-strong: #0f6b45;
+  --accent-ink: #06140e;
+  --accent-soft: rgba(30, 158, 106, 0.1);
+  --accent-line: rgba(30, 158, 106, 0.34);
+  --button: #0e3b2e;
+  --button-hover: #13493a;
+  --button-text: #f5f5ef;
+  --danger: #a3342b;
+  --danger-soft: rgba(163, 52, 43, 0.08);
+  --warning: #7a5a0c;
+  --warning-soft: rgba(122, 90, 12, 0.09);
+  --success: #2f6b47;
+  --success-soft: rgba(47, 107, 71, 0.09);
+  --focus: 0 0 0 3px rgba(15, 107, 69, 0.3);
+  --wave: #1e9e6a;
+  --shadow-pop: 0 24px 70px rgba(11, 26, 20, 0.16);
 }

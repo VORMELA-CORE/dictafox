@@ -887,7 +887,7 @@ export function SettingsPage() {
               <div className="theme-grid" role="radiogroup" aria-label="Theme">
                 {(
                   [
-                    ["dark", "Dark", "Charcoal surfaces with a lime accent."],
+                    ["dark", "Dark", "Night surfaces with jade accents."],
                     ["light", "Light", "Paper surfaces with the same accent."],
                     ["system", "System", "Follow the desktop preference."],
                   ] as [Theme, string, string][]

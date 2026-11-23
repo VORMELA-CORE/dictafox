@@ -52,7 +52,7 @@ pub fn build(app: &AppHandle) -> tauri::Result<()> {
 
     TrayIconBuilder::with_id("main")
         .icon(icon)
-        .tooltip("DictaFox")
+        .tooltip("DictaFox by Vormela Core")
         .menu(&menu)
         .show_menu_on_left_click(false)
         .on_menu_event(|app, event| {

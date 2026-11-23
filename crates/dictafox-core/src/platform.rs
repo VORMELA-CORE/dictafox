@@ -168,7 +168,7 @@ pub fn capabilities(input: CapabilityInput<'_>) -> Capabilities {
     let model_installed = model_path.is_file();
     let disk = models::disk_usage();
     let mut dependencies = linux_dependencies(session);
-    dependencies.sort_by(|a, b| b.required.cmp(&a.required));
+    dependencies.sort_by_key(|dependency| std::cmp::Reverse(dependency.required));
 
     let (desktop_shortcut_available, desktop_shortcut_installed) = desktop_shortcut_state(session);
     let mut limitations = Vec::new();
@@ -325,6 +325,19 @@ pub fn open_path_in_file_manager(path: &std::path::Path) -> Result<(), String> {
     } else {
         path
     };
+    spawn_opener(target.as_os_str()).map_err(|err| format!("could not open file manager: {err}"))
+}
+
+/// Open an https link in the default browser.
+pub fn open_url(url: &str) -> Result<(), String> {
+    if !url.starts_with("https://") {
+        return Err("only https links can be opened".into());
+    }
+    spawn_opener(std::ffi::OsStr::new(url))
+        .map_err(|err| format!("could not open the browser: {err}"))
+}
+
+fn spawn_opener(target: &std::ffi::OsStr) -> std::io::Result<()> {
     let opener = if cfg!(target_os = "macos") {
         "open"
     } else if cfg!(windows) {
@@ -336,7 +349,6 @@ pub fn open_path_in_file_manager(path: &std::path::Path) -> Result<(), String> {
         .arg(target)
         .spawn()
         .map(|_| ())
-        .map_err(|err| format!("could not open file manager: {err}"))
 }
 
 /// Best-effort desktop notification; failures are silent because every
