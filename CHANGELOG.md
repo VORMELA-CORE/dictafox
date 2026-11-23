@@ -2,6 +2,11 @@
 
 All notable changes to DictaFox are listed here. DictaFox is a product of [Vormela Core](https://vormelacore.com).
 
+## Unreleased
+
+### Changed
+- New DictaFox app icon. It is a product mark derived from the Vormela Core system (the 55° blade angle, the flat shapes, jade on night), not the Vormela Core logo. The icon is endorsed by the "a Vormela Core product" line, as the brand guide specifies for products. Every platform icon is regenerated from `assets/brand/dictafox-app-icon-1024.png`.
+
 ## 0.1.1 (2026-11-23)
 
 ### Changed

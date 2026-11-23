@@ -3,7 +3,7 @@ import lockupDark from "../assets/brand/vormela-core-lockup-dark.svg";
 import lockupLight from "../assets/brand/vormela-core-lockup-light.svg";
 import { api } from "../services/api";
 
-/** The DictaFox app icon: the Vormela Core mark on night, as the brand guide specifies. */
+/** The DictaFox product mark: derived from the Vormela Core system, not the Vormela Core logo. */
 export function AppIcon({ size = 32, label = "" }: { size?: number; label?: string }) {
   return (
     <img

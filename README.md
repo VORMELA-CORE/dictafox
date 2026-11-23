@@ -146,7 +146,7 @@ scripts                installers and CI helpers
 
 ## Brand and icons
 
-DictaFox follows the Vormela Core brand system: the Malachite palette and the Manrope typeface. The app icon is the Vormela Core mark on night. To regenerate every platform icon after changing the artwork:
+DictaFox follows the Vormela Core brand system: the Malachite palette and the Manrope typeface. The app icon is a DictaFox product mark derived from the Vormela Core system. It is not the Vormela Core logo. To regenerate every platform icon after changing the artwork:
 
 ```bash
 npx tauri icon assets/brand/dictafox-app-icon-1024.png -o src-tauri/icons

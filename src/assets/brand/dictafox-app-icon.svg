@@ -1,3 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><rect width="64" height="64" rx="11.52" fill="#07110D"/><polygon points="12.16,21.58 22.63,21.58 32.00,36.94 27.64,43.68" fill="#34C489"/>
-<polygon points="25.02,21.58 51.84,21.58 46.61,29.30" fill="#34C489"/>
-<polygon points="40.07,27.99 45.96,30.38 35.71,44.98 28.29,44.98" fill="#34C489"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="11.52" fill="#07110D"/><polygon points="9.70,41.00 15.70,41.00 28.30,23.00 22.30,23.00" fill="#34C489"/><polygon points="17.10,49.00 23.10,49.00 46.90,15.00 40.90,15.00" fill="#34C489"/><polygon points="33.60,44.00 39.60,44.00 56.40,20.00 50.40,20.00" fill="#34C489"/></svg>
