@@ -18,7 +18,7 @@ export function About() {
           <ProductCredit />
           <div className="chip-row">
             <Badge tone="accent">MIT licensed</Badge>
-            <Badge>Version {capabilities?.version ?? "0.1.0"}</Badge>
+            <Badge>Version {capabilities?.version ?? "0.1.1"}</Badge>
             <Badge>Local first</Badge>
           </div>
         </div>
