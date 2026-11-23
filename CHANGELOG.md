@@ -1,0 +1,25 @@
+# Changelog
+
+All notable changes to DictaFox are listed here. DictaFox is a product of [Vormela Core](https://vormelacore.com).
+
+## Unreleased
+
+### Changed
+- New DictaFox app icon. It is a product mark derived from the Vormela Core system (the 55° blade angle, the flat shapes, jade on night), not the Vormela Core logo. The icon is endorsed by the "a Vormela Core product" line, as the brand guide specifies for products. Every platform icon is regenerated from `assets/brand/dictafox-app-icon-1024.png`.
+
+## 0.1.1 (2026-11-23)
+
+### Changed
+- New app icon: the Vormela Core mark on night, as set out in the brand guide. Every platform icon is regenerated from `assets/brand/dictafox-app-icon-1024.png`.
+- Visual identity follows the Vormela Core brand: the Malachite colour palette in both themes, and the Manrope typeface, bundled with the app (no network font download).
+- "by Vormela Core" appears in the window title, the tray tooltip, the sidebar, the start-up screen, the setup screen, the About page and the README.
+- The About page links to vormelacore.com and to the source repository.
+
+## 0.1.0 (2026-11-21)
+
+First public release for Linux (`.deb`, `.rpm`, AppImage), Windows (`.msi`, setup `.exe`) and macOS (Apple Silicon and Intel `.dmg`).
+
+- Hold or toggle a shortcut, speak, and the text is typed into the app you were using.
+- Local speech recognition with whisper.cpp. No account, subscription or cloud service.
+- Local history and a personal dictionary. Optional text refinement, off by default, can send transcript text (never audio) to a provider you configure.
+- Command-line control: `dictafox --toggle`, `--start`, `--stop`, `--cancel` and `--show`.

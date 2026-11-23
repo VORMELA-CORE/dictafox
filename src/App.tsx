@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Sidebar } from "./components/layout";
-import { ErrorBanner, FoxMark, Toasts } from "./components/ui";
+import { AppIcon, ProductCredit } from "./components/brand";
+import { ErrorBanner, Toasts } from "./components/ui";
 import { useApp } from "./hooks/useApp";
 import { About } from "./pages/About";
 import { Dashboard } from "./pages/Dashboard";
@@ -52,10 +53,11 @@ export function App() {
   if (loading) {
     return (
       <div className="boot-screen">
-        <FoxMark size={64} />
+        <AppIcon size={64} label="DictaFox" />
         <div className="boot-copy">
           <h1>DictaFox</h1>
           <p>Loading your local dictation workspace…</p>
+          <ProductCredit lockupHeight={18} />
         </div>
       </div>
     );
@@ -64,7 +66,7 @@ export function App() {
   if (fatal || !bootstrap || !settings) {
     return (
       <div className="boot-screen">
-        <FoxMark size={56} />
+        <AppIcon size={56} label="DictaFox" />
         <div className="boot-copy">
           <h1>DictaFox could not start</h1>
           <p>

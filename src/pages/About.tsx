@@ -1,4 +1,5 @@
-import { FoxMark, Badge, Button, LimitationsList } from "../components/ui";
+import { AppIcon, ProductCredit, VormelaLink } from "../components/brand";
+import { Badge, Button, LimitationsList } from "../components/ui";
 import { useApp } from "../hooks/useApp";
 import { platformInfo } from "../utils/platform";
 import { ClipboardCopy, FolderOpen, ShieldCheck } from "lucide-react";
@@ -10,13 +11,14 @@ export function About() {
   return (
     <div className="page about">
       <header className="about-hero">
-        <FoxMark size={64} />
+        <AppIcon size={64} label="DictaFox" />
         <div>
           <h1>DictaFox</h1>
           <p className="tagline">Speak Naturally. Type Everywhere.</p>
+          <ProductCredit />
           <div className="chip-row">
             <Badge tone="accent">MIT licensed</Badge>
-            <Badge>Version {capabilities?.version ?? "0.1.0"}</Badge>
+            <Badge>Version {capabilities?.version ?? "0.1.1"}</Badge>
             <Badge>Local first</Badge>
           </div>
         </div>
@@ -169,10 +171,13 @@ export function About() {
         <div>
           <h2>License and attribution</h2>
           <p className="muted">
-            DictaFox is MIT licensed. Speech recognition is powered by
+            © 2026 Vormela Core. DictaFox is a product of{" "}
+            <VormelaLink link="website">Vormela Core</VormelaLink>, released under the
+            MIT license. Speech recognition is powered by
             whisper.cpp (MIT). The interface uses React, Tauri and Lucide icons,
             each under its own open-source license. No performance figures are
-            claimed without measurement.
+            claimed without measurement. Source code is on{" "}
+            <VormelaLink link="repository">GitHub</VormelaLink>.
           </p>
         </div>
         <div className="about-actions">

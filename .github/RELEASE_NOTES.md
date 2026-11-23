@@ -2,6 +2,13 @@ DictaFox by **Vormela Core** — Speak Naturally. Type Everywhere.
 
 Local, private voice dictation: press a shortcut, speak, and the text is typed into the app you were using. Speech recognition runs on your computer with whisper.cpp.
 
+## What's new in 0.1.1
+
+- New app icon and visual identity from the Vormela Core brand system: the Vormela Core mark, the Malachite colour palette and the Manrope typeface.
+- "by Vormela Core" in the window title, tray, sidebar, About page and setup screens, with links to vormelacore.com and this repository.
+- Cloud text refinement is described accurately: it is optional, off by default, and sends transcript text only.
+- Full changes are in [CHANGELOG.md](https://github.com/VORMELA-CORE/dictafox/blob/main/CHANGELOG.md).
+
 ## Install
 
 | Platform | Easiest | File |

@@ -11,7 +11,7 @@ import type { Route } from "../hooks/useApp";
 import { platformInfo } from "../utils/platform";
 import { useApp } from "../hooks/useApp";
 import { PROFILE_LABELS } from "../utils/format";
-import { FoxMark } from "./ui";
+import { AppIcon } from "./brand";
 
 const NAV_ITEMS: { route: Route; label: string; icon: typeof Mic }[] = [
   { route: "dashboard", label: "Dashboard", icon: LayoutDashboard },
@@ -39,10 +39,10 @@ export function Sidebar() {
         onClick={() => navigate("dashboard")}
         aria-label="DictaFox dashboard"
       >
-        <FoxMark size={34} />
+        <AppIcon size={34} />
         <span className="brand-text">
           <span className="brand-name">DictaFox</span>
-          <span className="brand-tag">Speak. Type. Everywhere.</span>
+          <span className="brand-tag">by Vormela Core</span>
         </span>
       </button>
 
@@ -82,6 +82,7 @@ export function Sidebar() {
         <p className="sidebar-note">
           <Mic size={13} aria-hidden="true" /> Audio stays on this device.
         </p>
+        <p className="sidebar-credit">© 2026 Vormela Core</p>
       </div>
     </aside>
   );

@@ -509,6 +509,25 @@ pub async fn open_models_dir() -> AppResult<()> {
     .await
 }
 
+/// Opens one of DictaFox's own project links. The webview names the link;
+/// it never supplies a URL, so the page cannot open arbitrary addresses.
+#[tauri::command]
+pub async fn open_link(link: String) -> AppResult<()> {
+    let url = match link.as_str() {
+        "website" => "https://vormelacore.com",
+        "repository" => "https://github.com/VORMELA-CORE/dictafox",
+        _ => {
+            return Err(AppError::new("unknown_link", "DictaFox does not know that link."));
+        }
+    };
+    blocking(move || {
+        platform::open_url(url).map_err(|err| {
+            AppError::new("open_failed", "DictaFox could not open the link.").hint(err)
+        })
+    })
+    .await
+}
+
 #[tauri::command]
 pub fn quit_app(app: AppHandle) {
     app.exit(0);
