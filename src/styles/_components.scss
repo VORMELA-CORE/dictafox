@@ -78,11 +78,16 @@
     background var(--transition),
     border-color var(--transition),
     color var(--transition),
-    opacity var(--transition);
+    opacity var(--transition),
+    transform var(--transition);
 
   .btn-icon {
     display: inline-flex;
     align-items: center;
+  }
+
+  &:active:not(:disabled) {
+    transform: scale(0.98);
   }
 
   &:disabled {
@@ -159,11 +164,16 @@
   color: var(--text-muted);
   transition:
     background var(--transition),
-    color var(--transition);
+    color var(--transition),
+    transform var(--transition);
 
   &:hover {
     background: var(--surface-3);
     color: var(--text);
+  }
+
+  &:active {
+    transform: scale(0.92);
   }
 }
 
@@ -676,8 +686,12 @@ input[type="range"] {
     max-width: 5px;
     border-radius: 2px;
     background: var(--wave);
+    height: 100%;
+    transform-origin: 50% 100%;
     opacity: 0.55;
-    transition: height 80ms linear;
+    transition:
+      transform 80ms linear,
+      opacity var(--transition);
   }
 
   &.is-active .waveform-bar {
@@ -717,9 +731,10 @@ input[type="range"] {
   span {
     display: block;
     height: 100%;
-    width: 0;
+    width: 100%;
+    transform-origin: 0 50%;
     background: var(--accent);
-    transition: width 90ms linear;
+    transition: transform 90ms linear;
   }
 }
 
@@ -892,8 +907,10 @@ input[type="range"] {
   span {
     display: block;
     height: 100%;
+    width: 100%;
+    transform-origin: 0 50%;
     background: var(--accent);
-    transition: width 180ms linear;
+    transition: transform 180ms var(--ease-out);
   }
 }
 
